@@ -2,13 +2,20 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector: 'my-app',
-	template: '<div>Welcome {{name}}. <button (click)="sayMyName()">Say my name</button></div>'
+	template: `
+	<div>Welcome to {{name}} workshop. <button (click)="sayName()">Say name</button></div>
+	<user-profile [name]="name"></user-profile>
+	`
 })
+
 export class AppComponent { 
 	constructor() {
-		this.name = 'Jose Julian'
+		this.name = 'Angular 2 / Globant'
 	}
-	sayMyName() {
-		console.log('My name is', this.name)
+	sayName() {
+		console.log('My workshop is', this.name)
 	}
 }
+
+
+
