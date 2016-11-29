@@ -2,6 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector: 'my-app',
-	template: `<h1>Hello {{name}}</h1>`
+	template: '<div>Welcome {{name}}. <button (click)="sayMyName()">Say my name</button></div>'
 })
-export class AppComponent { name = 'Angular2 WorkShop'; }
+export class AppComponent { 
+	constructor() {
+		this.name = 'Jose Julian'
+	}
+	sayMyName() {
+		console.log('My name is', this.name)
+	}
+}
