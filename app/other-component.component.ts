@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'other-component',
-	template: '<div>{{name}}</div>'
+	template: '<div>Other component {{name}}</div>'
 })
 export class OtherComponentComponent {
 	@Input() name: string;
