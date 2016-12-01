@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
 	</div>
 	<other-component [name]="name"></other-component>
 	<router-outlet></router-outlet>
-	`
+	`,
+	//styles: [`
+	//div{font:100% Helvetica,sans-serif;color:red}
+	//`]
+	styleUrls: ['/styles/styles.css']
 })
 
 export class AppComponent { 
