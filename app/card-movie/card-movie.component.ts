@@ -8,5 +8,7 @@ import { Component, Input } from '@angular/core';
 export class CardMovieComponent {
 	@Input() title: string;
 	@Input() id: number;
+	@Input() poster: string;
+	@Input() rate: number;
 	constructor() {}
 }

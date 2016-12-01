@@ -1,7 +1,2 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #00f;
+@import "css3-mixins.scss"; // SASS mixins taken from http://mynameismatthieu.com/sass-css3-mixins/
 
-div {
-	font: 100% $font-stack;
-	color: $primary-color;
-}

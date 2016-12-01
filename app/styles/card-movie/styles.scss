@@ -1,7 +1,16 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #f00;
+@import "../css3-mixins.scss";
 
-div {
-	font: 100% $font-stack;
-	color: $primary-color;
+.panel-heading h3{
+	display: inline-block;
+}
+.panel-body{
+	display: block;
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		object-fit: cover;
+	}
 }

@@ -1,1 +1,9 @@
-<div>{{id}} - {{title}}</div>
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{title}}</h3>
+		<rating [rate]="rate"></rating>
+	</div>
+	<div class="panel-body">
+		<img src="./app/images/{{poster}}" alt="{{title}}" title="{{title}}" />
+	</div>
+</div>
