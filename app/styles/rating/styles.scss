@@ -1,1 +1,8 @@
 @import "../css3-mixins.scss";
+
+.rating{
+	float: right;
+	> div{
+		display: inline-block;
+	}
+}

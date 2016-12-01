@@ -7,5 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class Rating {
 	@Input() rate: number;
-	constructor() {}
+	private range:Array<number> = [1,2,3,4,5];
+	constructor() {		
+	}
 }
