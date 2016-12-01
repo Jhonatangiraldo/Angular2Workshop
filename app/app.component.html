@@ -1,11 +1,11 @@
 	<div>
 		Welcome {{name}} to workshop. <button (click)="sayName()">Say name</button>
 	</div>
-	<other-component [name]="name"></other-component>
+	
 	<router-outlet></router-outlet>
 
 	<ul>
 		<li *ngFor="let movie of movies">
-			<span>{{movie.id}}</span> + {{movie.title}}
+			<card-movie [title]="movie.title" [id]="movie.id"></card-movie>
 		</li>
 	</ul>
