@@ -2,7 +2,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'first-component',
-	template: '<div>First component</div>'
+	templateUrl: 'app/first-component/first-component.component.html',
+	styleUrls: ['./app/styles/first-component/styles.css']
 })
 export class FirstComponentComponent {
 	constructor() {}

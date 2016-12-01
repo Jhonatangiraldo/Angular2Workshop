@@ -9,7 +9,7 @@ var rename = require('gulp-rename');
 
 // Compile Our Sass
 gulp.task('sass', function() {
-	return gulp.src(['app/**/*.scss'])
+	return gulp.src(['app/**/*.scss', 'app/**/**/*.scss'])
 	.pipe(sass({outputStyle: 'compressed'}))
 	.pipe(gulp.dest('app/'));
 });
