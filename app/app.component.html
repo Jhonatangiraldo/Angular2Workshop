@@ -3,3 +3,9 @@
 	</div>
 	<other-component [name]="name"></other-component>
 	<router-outlet></router-outlet>
+
+	<ul>
+		<li *ngFor="let movie of movies">
+			<span>{{movie.id}}</span> + {{movie.title}}
+		</li>
+	</ul>
