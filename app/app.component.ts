@@ -1,32 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Movie } from './movie';
-
-const MOVIES: Movie[] = [
-{ id: 1, title: "Pete's Dragon"},
-{ id: 2, title: "Moana"},
-{ id: 3, title: 'Solace' },
-{ id: 4, title: 'Passengers' },
-{ id: 5, title: 'Assassins Creed' },
-{ id: 6, title: 'Rogue One' },
-{ id: 7, title: 'Nocturnal Animals' },
-{ id: 8, title: 'Miss Peregrines' },
-{ id: 9, title: 'The Shining' },
-{ id: 10, title: 'Suicide Squad' }
-];
+import { MovieService } from './service/movie.service';
 
 @Component({
 	selector: 'my-app',
 	templateUrl: 'app/app.component.html',
-	styleUrls: ['app/styles/styles.css']
+	styleUrls: ['app/styles/styles.css'],
+	providers: [MovieService]
 })
 
-export class AppComponent { 
+export class AppComponent implements OnInit{ 
 	name: string;
-	movies = MOVIES;
-	constructor() {
+	movies: Movie[];
+	constructor( private movieService: MovieService ) {
 		this.name = 'Other World';
 	}
+
+	getMovies(): void {
+		this.movieService.getMovies().then(movies => this.movies = movies);
+	}
+	ngOnInit(): void {
+		this.getMovies();
+	}
+
 	sayName() {
 		console.log('My workshop is', this.name)
 	}
