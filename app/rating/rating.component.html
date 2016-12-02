@@ -1,5 +1,9 @@
 <div class="rating">
 	<div *ngFor="let star of range; let i = index">
-		<span class="glyphicon" [ngClass]="{'glyphicon-star': star <= rate, 'glyphicon-star-empty': star > rate}"></span>
-	</div>
+		<span class="glyphicon" 
+		[ngClass]="{'glyphicon-star': star <= rate, 'glyphicon-star-empty': star > rate}"
+		(click)="update(star)"
+		>
+	</span>
+</div>
 </div>
