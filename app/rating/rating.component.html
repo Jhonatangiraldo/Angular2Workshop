@@ -1,7 +1,7 @@
-<div class="rating">{{rate}}
-	<div *ngFor="let star of range; let i = index" id="{{id}}">
+<div class="rating">{{movie.rate}}
+	<div *ngFor="let star of range; let i = index" id="{{movie.id}}">
 		<span class="glyphicon" 
-		[ngClass]="{'glyphicon-star': star <= rate, 'glyphicon-star-empty': star > rate}"
+		[ngClass]="{'glyphicon-star': star <= movie.rate, 'glyphicon-star-empty': star > movie.rate}"
 		(click)="update(star)"
 		>
 	</span>
