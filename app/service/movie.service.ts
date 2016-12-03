@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Headers, Http, URLSearchParams } from '@angular/http';
 
+import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
 import { Movie } from '../movie';
@@ -12,7 +13,9 @@ export class MovieService {
 	private headers = new Headers({'Content-Type': 'application/json'});
 	private moviesUrl = './service/movies';  // URL to web api
 
-	constructor(private http: Http) { }
+	constructor(
+		private http: Http,
+		) { }
 
 	getMovies(): Promise<Movie[]> {
 		return this.http.get(this.moviesUrl)

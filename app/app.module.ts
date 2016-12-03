@@ -11,7 +11,11 @@ import { AppRoutingModule }     from './app-routing.module';
 
 import { AppComponent }  from './app.component';
 import { Rating }  from './rating/rating.component';
+import { SearchComponent }  from './search/search.component';
 import { CardMovieComponent }  from './card-movie/card-movie.component';
+
+import { SearchPipe }			from './search/search.pipe'
+
 
 @NgModule({
 	imports:      [ 
@@ -23,7 +27,9 @@ import { CardMovieComponent }  from './card-movie/card-movie.component';
 	declarations: [ 
 	AppComponent, 
 	Rating,
-	CardMovieComponent 
+	SearchComponent,
+	CardMovieComponent,
+	SearchPipe
 	],
 	bootstrap:    [ AppComponent ]
 })
