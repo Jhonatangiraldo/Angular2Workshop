@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 
 import { Movie }        from '../movie';
 
@@ -8,6 +8,14 @@ import { Movie }        from '../movie';
 	styleUrls: ['./app/styles/card-movie/styles.css']
 })
 export class CardMovieComponent {
+	@Output() update = new EventEmitter();
+
 	@Input() movie: Movie;
+
 	constructor() {}
+
+	clicked(movieSelectedCard: Movie[]){
+		this.update.emit(movieSelectedCard);
+	}
+
 }

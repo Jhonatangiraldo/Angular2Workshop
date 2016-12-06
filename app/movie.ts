@@ -3,4 +3,5 @@ export class Movie {
 	title: string;
 	poster: string;
 	rate: number;
+	description: string;
 }

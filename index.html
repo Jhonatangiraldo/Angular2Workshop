@@ -26,6 +26,9 @@
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css">
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-material-design/dist/css/ripples.min.css">
 
+  <!-- JQuery JS -->
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
   <script>
     System.import('app').catch(function(err){ console.error(err); });
   </script>
@@ -34,5 +37,14 @@
 <body>
   <my-app>Loading AppComponent content here ...</my-app>
   
+  <!-- Twitter Bootstrap JS -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Bootstrap Material Design JS -->
+  <script src="node_modules/bootstrap-material-design/dist/js/material.min.js"></script>
+  <script src="node_modules/bootstrap-material-design/dist/js/ripples.min.js"></script>
+  <script>
+    $.material.init();
+  </script>
+
 </body>
 </html>

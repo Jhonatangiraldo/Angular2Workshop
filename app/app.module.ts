@@ -13,6 +13,7 @@ import { AppComponent }  from './app.component';
 import { Rating }  from './rating/rating.component';
 import { SearchComponent }  from './search/search.component';
 import { CardMovieComponent }  from './card-movie/card-movie.component';
+import { ModalComponent }  from './modal/modal.component';
 
 import { SearchPipe }			from './search/search.pipe'
 
@@ -29,6 +30,7 @@ import { SearchPipe }			from './search/search.pipe'
 	Rating,
 	SearchComponent,
 	CardMovieComponent,
+	ModalComponent,
 	SearchPipe
 	],
 	bootstrap:    [ AppComponent ]
