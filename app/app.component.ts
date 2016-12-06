@@ -1,9 +1,8 @@
-import { Component, OnInit }	from '@angular/core';
+import { Component, OnInit, Input }	from '@angular/core';
 
 import { Movie } 				from './movie';
 import { MovieService } 		from './service/movie.service';
 import { SearchPipe }			from './search/search.pipe'
-
 
 @Component({
 	selector: 'my-app',
@@ -13,7 +12,9 @@ import { SearchPipe }			from './search/search.pipe'
 })
 
 export class AppComponent implements OnInit{ 
+	//@Input() term: string;
 	movies: Movie[];
+	
 	constructor( private movieService: MovieService ) {
 	}
 	getMovies(): void {

@@ -7,10 +7,10 @@ import { Movie } from '../movie';
 })
 
 export class SearchPipe implements PipeTransform {
-	transform (movies: Movie[]) {
+	transform (movies: Movie[], args: string) {
 		if (movies==null) {
-     	 	return null;
-    	}
-	    return movies.filter((item) => item.title.startsWith('M'))
-	  }
+			return null;
+		}
+		return movies.filter((item) => item.title.toLowerCase().startsWith(args.toLowerCase()))
+	}
 }

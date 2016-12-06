@@ -1,5 +1,4 @@
-import { Component } 		from '@angular/core';
-import { Movie } 			from '../movie';
+import { Component, OnInit, Output, EventEmitter } 		from '@angular/core';
 
 @Component({
 	moduleId: module.id,
@@ -9,9 +8,13 @@ import { Movie } 			from '../movie';
 })
 
 export class SearchComponent{ 
-	movies: Movie[];
+	@Output() update = new EventEmitter();
 
 	constructor() {
+	}
+
+	ngOnInit(){
+		this.update.emit('');
 	}
 
 }
